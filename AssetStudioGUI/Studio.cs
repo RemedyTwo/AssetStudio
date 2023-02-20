@@ -371,7 +371,7 @@ namespace AssetStudioGUI
             return typeMap;
         }
 
-        public static void ExportAssets(string savePath, List<AssetItem> toExportAssets, ExportType exportType)
+        public static void ExportAssets(string savePath, List<AssetItem> toExportAssets, ExportType exportType, string base_folder = "")
         {
             ThreadPool.QueueUserWorkItem(state =>
             {
@@ -408,6 +408,10 @@ namespace AssetStudioGUI
                             {
                                 exportPath = Path.Combine(savePath, Path.GetFileName(asset.SourceFile.originalPath) + "_export", asset.SourceFile.fileName);
                             }
+                            break;
+                        case 3: //reproduce folder arrangment
+                            string recreated_original_directory = Path.GetDirectoryName(asset.SourceFile.originalPath) + Path.DirectorySeparatorChar + Path.GetFileNameWithoutExtension(asset.SourceFile.originalPath);
+                            exportPath = savePath + Path.DirectorySeparatorChar + recreated_original_directory.Substring(base_folder.Length);
                             break;
                         default:
                             exportPath = savePath;

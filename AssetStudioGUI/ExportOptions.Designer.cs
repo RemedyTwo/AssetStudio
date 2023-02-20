@@ -62,6 +62,7 @@
             this.exportAllNodes = new System.Windows.Forms.CheckBox();
             this.eulerFilter = new System.Windows.Forms.CheckBox();
             this.exportUvsTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.removesuffix = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -94,6 +95,7 @@
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.removesuffix);
             this.groupBox1.Controls.Add(this.openAfterExport);
             this.groupBox1.Controls.Add(this.restoreExtensionName);
             this.groupBox1.Controls.Add(this.assetGroupOptions);
@@ -140,7 +142,8 @@
             "type name",
             "container path",
             "source file name",
-            "do not group"});
+            "reproduce folder arrangment",
+            "do not group"}); ;
             this.assetGroupOptions.Location = new System.Drawing.Point(6, 32);
             this.assetGroupOptions.Name = "assetGroupOptions";
             this.assetGroupOptions.Size = new System.Drawing.Size(149, 20);
@@ -231,6 +234,18 @@
             this.converttexture.TabIndex = 1;
             this.converttexture.Text = "Convert Texture2D";
             this.converttexture.UseVisualStyleBackColor = true;
+            //
+            // removesuffix
+            //
+            this.removesuffix.AutoSize = true;
+            this.removesuffix.Checked = true;
+            this.removesuffix.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.removesuffix.Location = new System.Drawing.Point(6, 182);
+            this.removesuffix.Name = "removesuffix";
+            this.removesuffix.Size = new System.Drawing.Size(126, 16);
+            this.removesuffix.TabIndex = 1;
+            this.removesuffix.Text = "Remove '.asset' and '.prefab' extension suffix from the extracted filenames.";
+            this.removesuffix.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -531,5 +546,6 @@
         private System.Windows.Forms.CheckBox openAfterExport;
         private System.Windows.Forms.CheckBox exportAllUvsAsDiffuseMaps;
         private System.Windows.Forms.ToolTip exportUvsTooltip;
+        private System.Windows.Forms.CheckBox removesuffix;
     }
 }
