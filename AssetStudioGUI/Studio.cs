@@ -13,32 +13,32 @@ using Object = AssetStudio.Object;
 
 namespace AssetStudioGUI
 {
-    internal enum ExportType
+    public enum ExportType
     {
         Convert,
         Raw,
         Dump
     }
 
-    internal enum ExportFilter
+    public enum ExportFilter
     {
         All,
         Selected,
         Filtered
     }
 
-    internal enum ExportListType
+    public enum ExportListType
     {
         XML
     }
 
-    internal static class Studio
+    public static class Studio
     {
         public static AssetsManager assetsManager = new AssetsManager();
         public static AssemblyLoader assemblyLoader = new AssemblyLoader();
         public static List<AssetItem> exportableAssets = new List<AssetItem>();
         public static List<AssetItem> visibleAssets = new List<AssetItem>();
-        internal static Action<string> StatusStripUpdate = x => { };
+        internal static Action<string> StatusStripUpdate = x => { Console.WriteLine(x); };
 
         public static int ExtractFolder(string path, string savePath)
         {

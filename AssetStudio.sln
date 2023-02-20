@@ -25,6 +25,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssetStudioFBXNative", "Ass
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Texture2DDecoderNative", "Texture2DDecoderNative\Texture2DDecoderNative.vcxproj", "{29356642-C46E-4144-83D8-22DC09D0D7FD}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetStudioCLI", "AssetStudioCLI\AssetStudioCLI.csproj", "{B0582B05-57DE-4185-8129-1CCDD3C06D2D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{422FEC21-EF60-4F29-AA56-95DFDA23C913} = {422FEC21-EF60-4F29-AA56-95DFDA23C913}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
