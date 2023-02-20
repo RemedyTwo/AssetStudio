@@ -5,7 +5,7 @@ using AssetStudio;
 
 namespace AssetStudioGUI
 {
-    internal class TypeTreeItem : ListViewItem
+    public class TypeTreeItem : ListViewItem
     {
         private TypeTree m_Type;
 
