@@ -35,7 +35,7 @@ namespace AssetStudioGUI
             scaleFactor.Value = Properties.Settings.Default.scaleFactor;
             fbxVersion.SelectedIndex = Properties.Settings.Default.fbxVersion;
             fbxFormat.SelectedIndex = Properties.Settings.Default.fbxFormat;
-
+            removesuffix.Checked = Properties.Settings.Default.removesuffix;
         }
 
         private void OKbutton_Click(object sender, EventArgs e)

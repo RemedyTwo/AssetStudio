@@ -84,6 +84,13 @@ namespace AssetStudioGUI
                     extension = Path.GetExtension(item.Container);
                 }
             }
+            if (Properties.Settings.Default.removesuffix)
+            {
+                if (extension.Equals(".asset") || extension.Equals(".prefab"))
+                {
+                    extension = "";
+                }
+            }
             if (!TryExportFile(exportPath, item, extension, out var exportFullPath))
                 return false;
             File.WriteAllBytes(exportFullPath, m_TextAsset.m_Script);
